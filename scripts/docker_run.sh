@@ -15,6 +15,6 @@ docker run --rm -it \
   -e TZ=Asia/Taipei \
   -v "${REPO_ROOT}:/work" \
   -w /work \
-  -u "${UIDGID}" \
+  -u "$(id -u)" \
   "${IMAGE}" \
   bash

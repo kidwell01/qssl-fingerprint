@@ -10,7 +10,7 @@ docker run --rm \
   --ipc=host \
   -v "${REPO_ROOT}:/work" \
   -w /work \
-  -u "${UIDGID}" \
+  -u "$(id -u)" \
   "${IMAGE}" \
   python - << 'PY'
 import os, sys
