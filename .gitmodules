@@ -1,0 +1,3 @@
+[submodule "upstream/QSSL/quantum-neural-network"]
+	path = upstream/QSSL/quantum-neural-network
+	url = https://github.com/bjader/quantum-neural-network.git
