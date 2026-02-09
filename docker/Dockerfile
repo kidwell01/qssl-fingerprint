@@ -1,5 +1,5 @@
 # Modern PyTorch CUDA runtime (supports recent GPUs)
-FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+FROM pytorch/pytorch:2.7.0-cuda12.8-cudnn9-runtime
 
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /work
@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # (We keep it simple first; if your code needs more, we'll add)
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir \
+      torchsummary \
+      \
       qiskit \
       qiskit-aer \
       qiskit-machine-learning \
