@@ -7,6 +7,7 @@ WORKDIR /work
 # System deps (basic build tools + git + some common libs)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git curl ca-certificates build-essential \
+    libglib2.0-0 libsm6 libxext6 libxrender1 libxcb1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Python deps: qiskit stack + extras
